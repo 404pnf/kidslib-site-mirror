@@ -11,7 +11,7 @@ def mirror_kidslib
   (all_urls + %w[http://kidslib.fltrp.com/]).each do |url|
     p url
     # --convert-links -r
-    system("wget --convert-links  -E -N -nc -k -p #{url} -o wget.log" ) # 有 -p 下载显示完整页面所有资源 , 有 -nc 因此不会重复下载css，图片等模版资源
+    system("wget --convert-links  -E -N -nc -k -p #{url} -o log-wget.txt" ) # 有 -p 下载显示完整页面所有资源 , 有 -nc 因此不会重复下载css，图片等模版资源
   end
 end
 
